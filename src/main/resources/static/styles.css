@@ -1,4 +1,9 @@
-body {
+table {
   font-size: 18px;
-  color: purple;
+  color: rgb(255, 216, 99);
+  background-color: rgb(143, 27, 19);
+}
+
+th, td {
+  padding: 5px
 }

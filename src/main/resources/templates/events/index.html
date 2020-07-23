@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head th:replace="fragments :: head"></head>
-<body class="container">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Coding Events</title>
+    <link rel = "stylesheet" th:href="@{styles.css}" />
+</head>
+<body>
 
 <h1>All Events</h1>
 
-<nav th:replace="fragments :: navigation"></nav>
+<!--Using unordered list-->
+<!--<ul>-->
+<!--    <th:block th:each="event : ${events}">-->
+<!--        <li th:text="${event.getKey() + '|' + event.getValue()}"></li>-->
+<!--    </th:block>-->
+<!--</ul>-->
 
-<p th:unless="${events} and ${events.size()}">No events!</p>
 
-<table class="table table-striped">
+<!--Using table-->
+<table border="1">
     <thead>
-        <tr>
-            <th>Name</th>
-        </tr>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Location</th>
+    </tr>
     </thead>
     <tr th:each="event : ${events}">
-        <td th:text="${event}"></td>
+        <td th:text="${event.getKey()}"></td>
+        <td th:text="${event.getValue()}"></td>
+        <td th:replace="fragments :: techHub"></td>
     </tr>
 </table>
 

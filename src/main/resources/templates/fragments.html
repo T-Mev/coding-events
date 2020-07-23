@@ -1,25 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head th:fragment="head">
+<head>
     <meta charset="UTF-8"/>
-    <title>Coding Events</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
-<!--    using local stylesheet and script-->
-<!--    <link rel="stylesheet" th:href="@{/styles.css}">-->
-<!--    <script th:src="@{/script.js}"></script>-->
-
+    <title></title>
 </head>
 <body>
 
-<nav th:fragment="navigation">
-    <ul class="nav">
-        <li class="nav-item"><a href="/events" class="nav-link">All Events</a></li>
-        <li class="nav-item"><a href="/events/create" class="nav-link">Create Event</a></li>
-    </ul>
-</nav>
+<td th:fragment="techHub" th:text="'Tampa, FL'"></td>
 
 </body>
 </html>
